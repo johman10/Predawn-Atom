@@ -1,32 +1,96 @@
-@import "ui-variables";
-
 .tree-view {
-  font-size: @font-size;
-  background: @tree-view-background-color;
+  background: rgb(51, 51, 51);
+  padding: 12px;
+}
+
+.tree-view:before {
+  content: 'folders';
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: rgb(120,120,120);
+  font-weight: bold;
+}
+
+.list-tree {
+  line-height: 16px !important;
+  font-family: "Helvetica";
+  font-size: 12px;
+  vertical-align: middle;
 
   .selected:before {
-  	background: #444;
-    box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+    background-color: transparent;
+  }
+
+  .list-nested-item {
+    &.status-modified .list-item:not(.selected) {
+      color: #aaaaaa;
+    }
+
+    .list-item:before {
+      display: none !important;
+    }
+
+    &.expanded .icon-repo,
+    &.expanded .icon-file-directory {
+      &:before {
+        background-image: url("assets/group-open.png");
+        content: " ";
+        width: 24px;
+        height: 16px;
+        margin-right: 0 !important;
+        top: 4.5px;
+      }
+    }
+
+    &.collapsed .icon-repo,
+    &.collapsed .icon-file-directory {
+      &:before {
+        background-image: url("assets/group-closed.png");
+        content: " ";
+        width: 24px;
+        height: 16px;
+        margin-right: 0 !important;
+        top: 4.5px;
+      }
+    }
+  }
+
+  .list-item {
+    .icon-file-text:before,
+    .icon-file-media:before,
+    .icon-book:before {
+      content: '';
+      width: 0;
+      margin-right: 0 !important;
+    }
+
+    &:hover {
+      color: white !important;
+    }
+  }
+
+  li:not(.list-nested-item) {
+    &.selected {
+      background-image: url("assets/sidebar-row-selected.png");
+      padding-left: 69px !important;
+      margin-left: -29px !important;
+      width: 122%;
+      color: white !important;
+      text-shadow: none;
+    }
+
+    &.status-modified:not(.selected):not(:hover) {
+      color: inherit;
+    }
+  }
+
+  .file {
+    margin-left: 24px !important;
   }
 }
 
-.focusable-panel {
-  opacity: 1;
-  background: #303030;
-  box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
-
-  &:focus {
-    background: #282828;
-
-    .selected:before {
-      background: @background-color-selected;
-    }
-
-    .selected > .name,
-    .selected > .name:before,
-    .selected > .list-item > .name,
-    .selected > .list-item > .name:before {
-      color: #fff !important;
-    }
-  }
+.status-modified {
+  color: inherit;
 }
