@@ -76,12 +76,10 @@
       background-image: url("assets/sidebar-row-selected.png");
       padding-left: 69px !important;
       margin-left: -29px !important;
-      width: 122%;
-      color: white !important;
-      text-shadow: none;
+      width: 118%;
     }
 
-    &.status-modified:not(.selected):not(:hover) {
+    &.status-modified:not(.selected) {
       color: inherit;
     }
   }
@@ -93,4 +91,25 @@
 
 .status-modified {
   color: inherit;
+}
+
+.selected:not(.status-ignored) {
+  .list-item .name {
+    color: #aaaaaa
+  }
+
+  .list-item .name:hover {
+    color: white;
+  }
+}
+
+.selected {
+  &.status-ignored .list-item .name {
+    color: #555555;
+    text-shadow: none;
+  }
+
+  &.status-ignored .list-item .name:hover {
+    color: white;
+  }
 }
