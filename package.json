@@ -1,10 +1,10 @@
 {
-  "name": "atom-dark-ui",
+  "name": "predawn-ui",
   "theme": "ui",
-  "version": "0.26.0",
-  "description": "Default dark theme for interface components",
+  "version": "0.0.1",
+  "description": "Predawn based UI theme",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/johman10/predawn-atom",
   "engines": {
     "atom": ">0.40.0"
   }
