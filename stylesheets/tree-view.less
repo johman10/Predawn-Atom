@@ -8,7 +8,7 @@
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 11px;
   color: rgb(120,120,120);
   font-weight: bold;
 }
@@ -23,9 +23,19 @@
     background-color: transparent;
   }
 
-  .list-nested-item {
-    &.status-modified .list-item:not(.selected) {
-      color: #aaaaaa;
+  li.list-nested-item {
+    &.status-modified .list-item {
+      color: rgb(140, 140, 140);
+    }
+
+    &.directory .list-item:not(.file),
+    &.selected.directory .list-item:not(.file) {
+      color: rgb(210, 210, 210);
+    }
+
+    .list-item:hover,
+    &.selected .list-item:hover {
+      color: white !important;
     }
 
     .list-item:before {
@@ -65,10 +75,6 @@
       width: 0;
       margin-right: 0 !important;
     }
-
-    &:hover {
-      color: white !important;
-    }
   }
 
   li:not(.list-nested-item) {
@@ -77,39 +83,11 @@
       padding-left: 69px !important;
       margin-left: -29px !important;
       width: 118%;
-    }
-
-    &.status-modified:not(.selected) {
-      color: inherit;
+      color: white !important;
     }
   }
 
   .file {
     margin-left: 24px !important;
-  }
-}
-
-.status-modified {
-  color: inherit;
-}
-
-.selected:not(.status-ignored) {
-  .list-item .name {
-    color: #aaaaaa
-  }
-
-  .list-item .name:hover {
-    color: white;
-  }
-}
-
-.selected {
-  &.status-ignored .list-item .name {
-    color: #555555;
-    text-shadow: none;
-  }
-
-  &.status-ignored .list-item .name:hover {
-    color: white;
   }
 }
