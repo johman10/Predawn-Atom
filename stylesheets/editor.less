@@ -34,3 +34,26 @@
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
 }
+
+.editor {
+  background-color: rgb(40,40,40);
+  .gutter {
+    background-color: rgb(40,40,40);
+    border-right: dotted 0.5px rgb(241, 130, 96);
+    margin-right: 1px;
+
+    .cursor-line {
+      background-color: rgb(37,37,37);
+      opacity: 1;
+    }
+  }
+  .line-number.cursor-line-no-selection,
+  .line.cursor-line {
+    background-color: rgb(37,37,37);
+    opacity: 1;
+  }
+
+  .cursor {
+    border-color: rgb(241, 130, 96);
+  }
+}

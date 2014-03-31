@@ -23,8 +23,13 @@
     background-color: transparent;
   }
 
+  li:not(.list-nested-item) {
+    color: rgb(140, 140, 140);
+  }
+
   li.list-nested-item {
-    &.status-modified .list-item {
+    &.status-modified .list-item,
+    .status-ignored.list-item {
       color: rgb(140, 140, 140);
     }
 
