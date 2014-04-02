@@ -1,19 +1,17 @@
-@import "ui-mixins";
 @import "ui-variables";
-@import "buttons";
 
 .pane-item {
   .panel {
-    border-color: fadeout(@inset-panel-border-color, 30%);
+    border-color: fadeout(#fff, 30%);
   }
 }
 
 .panes {
   .pane {
-    background-color: lighten(@app-background-color, 4%);
+    background-color: lighten(#333, 4%);
 
     &:focus {
-      background-color: @app-background-color;
+      background-color: #333;
     }
   }
 
@@ -23,7 +21,7 @@
   }
 
   .pane-column > * {
-    border-bottom: 1px solid @pane-item-border-color;
+    border-bottom: 1px solid #fff;
     &:last-child { border-bottom: none; }
   }
 }
