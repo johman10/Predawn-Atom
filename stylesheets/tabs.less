@@ -1,7 +1,7 @@
 .tab-bar {
   height: 30px;
   line-height: 30px;
-  background: url("assets/standard-scrollbar-vertical.png");
+  background: @tab-wrapper-background;
 
   .tab {
     display: inline-block;
@@ -9,9 +9,9 @@
     padding-left: 15px;
     min-width: 100px;
     max-width: 260px;
-    background-image: url("assets/tab-inactive.png");
+    background-image: @tab-background-inactive;
     background-size: cover;
-    color: white;
+    color: @tab-text-color;
 
     .title {
       opacity: 0.5;
@@ -22,7 +22,7 @@
     }
 
     &.active {
-      background-image: url("assets/tab-active.png");
+      background-image: @tab-background-active;
       background-size: cover;
     }
 
@@ -31,12 +31,12 @@
     }
 
     &.active:hover {
-      background-image: url("assets/tab-active.png");
+      background-image: @tab-background-active;
       background-size: cover;
     }
 
     &:hover {
-      background-image: url("assets/tab-hover.png");
+      background-image: @tab-background-hover;
       background-size: cover;
     }
 
@@ -50,7 +50,7 @@
 
     .close-icon:before {
       content: ' ';
-      background-image: url("assets/tab-close.png");
+      background-image: @tab-close-icon;
       background-position: 50% 50%;
       opacity: 0.25;
       display: inline-block;
@@ -58,7 +58,7 @@
     }
 
     .close-icon:hover:before {
-      background-image: url("assets/tab-close-hover.png");
+      background-image: @tab-close-icon-hover;
       opacity: 1;
     }
 
@@ -72,7 +72,7 @@
     }
 
     &.modified:not(:hover) .close-icon:before {
-      background-image: url("assets/tab-dirty.png");
+      background-image: @tab-close-icon-dirty;
       opacity: 1;
     }
   }
