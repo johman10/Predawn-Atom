@@ -43,7 +43,7 @@
       color: white !important;
     }
 
-    .list-item:before {
+    .header:before {
       display: none !important;
     }
 
@@ -89,6 +89,15 @@
       margin-left: -29px !important;
       width: 118%;
       color: white !important;
+
+      &:before {
+        content: '';
+        background-image: url("assets/sidebar-row-selected");
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 25px;
+      }
     }
   }
 

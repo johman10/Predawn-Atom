@@ -11,10 +11,10 @@
     max-width: 260px;
     background-image: @tab-background-inactive;
     background-size: cover;
-    color: @tab-text-color;
+    color: @text-color-subtle;
 
     .title {
-      opacity: 0.5;
+      opacity: @text-color-subtle;
     }
 
     &:first-child {
@@ -22,12 +22,12 @@
     }
 
     &.active {
-      background-image: @tab-background-active;
+      background-image: @text-color;
       background-size: cover;
     }
 
     &.active .title {
-      opacity: 1;
+      color: @text-color;
     }
 
     &.active:hover {
@@ -41,7 +41,7 @@
     }
 
     &:hover .title {
-      opacity: 1;
+      color: @text-color
     }
 
     .close-icon {
