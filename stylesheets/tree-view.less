@@ -18,6 +18,13 @@
   font-size: 11px;
   vertical-align: middle;
 
+  &.has-collapsable-children .list-nested-item {
+    & > .list-tree > li,
+    & > .list-group > li {
+      padding-left: 12px;
+    }
+  }
+
   .selected:before {
     background-color: transparent;
   }
