@@ -9,7 +9,6 @@
   border-radius: 2px;
   padding-left: 10px/2;
 
-  .cursor { border-color: #fff; }
   .selection .region { background-color: lighten(#212224, 10%); }
 }
 
@@ -53,6 +52,7 @@
   }
 
   .cursor {
-    border-color: rgb(241, 130, 96);
+    border-color: @cursor-color;
+    border-left-width: @cursor-width;
   }
 }
