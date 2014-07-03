@@ -33,16 +33,49 @@
   -webkit-animation-iteration-count: 1;
 }
 
-.editor {
-  background-color: rgb(40,40,40);
+
+.editor,
+.editor.react {
+  .scroll-view {
+    padding-left: 0;
+  }
+
   .gutter {
-    background-color: rgb(40,40,40);
-    border-right: dotted 0.5px rgb(241, 130, 96);
-    margin-right: 1px;
+    color: #4d4d4d;
+    background-color: #282828;
+    border-right: none;
 
     .cursor-line {
       background-color: rgb(37,37,37);
       opacity: 1;
+    }
+
+    .line-number {
+      text-indent: 0.5em;
+      padding-right: 0.5em;
+      opacity: 1;
+      .icon-right {
+        opacity: 1;
+        padding: 0 2px 0 0;
+      }
+      &.foldable .icon-right:before {
+          background: @fold-open-icon;
+          background-size: cover;
+          content: ' ';
+          height: 1.2em;
+          width: 1.6em;
+      }
+      &.foldable.folded .icon-right:before {
+          background: @fold-closed-icon;
+          background-size: cover;
+          content: ' ';
+          height: 1.2em;
+          width: 1.6em;
+      }
+    }
+
+    .gutter:hover .line-number.foldable .icon-right:hover {
+      opacity: 0.8;
     }
   }
   .line-number.cursor-line-no-selection,
