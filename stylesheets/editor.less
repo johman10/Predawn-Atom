@@ -79,10 +79,16 @@
       opacity: 0.8;
     }
   }
-  .line-number.cursor-line-no-selection,
+
   .line.cursor-line {
-    background-color: rgb(37,37,37);
-    opacity: 1;
+    &:before {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -3;
+      background-color: rgb(37,37,37);
+    }
   }
 
   .cursor {
