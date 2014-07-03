@@ -22,9 +22,16 @@
     }
   }
 
-  &.disabled,
-  &[disabled] {
-    background-color: lighten(@text-color-highlight, 10%);
-    color: @button-background-color;
+  &.btn-primary {
+    &:focus {
+      background-color: @text-color-highlight;
+      color: @button-background-color;
+    }
+
+    &.disabled,
+    &[disabled] {
+      background-color: lighten(@text-color-highlight, 10%);
+      color: @button-background-color;
+    }
   }
 }
