@@ -2,7 +2,7 @@
 
 .btn {
   &:hover,
-  &:focus {
+  &:focus:not(.btn-default) {
     color: @text-color;
   }
 
@@ -20,5 +20,11 @@
     &:hover {
       background-color: lighten(@button-background-color-hover, 8%);
     }
+  }
+
+  &.disabled,
+  &[disabled] {
+    background-color: lighten(@text-color-highlight, 10%);
+    color: @button-background-color;
   }
 }
