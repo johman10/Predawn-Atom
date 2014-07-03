@@ -1,7 +1,7 @@
 .tab-bar {
   height: 30px;
   line-height: 30px;
-  background: @tab-wrapper-background;
+  background-color: @tab-bar-background-color;
 
   .tab {
     display: inline-block;
@@ -9,8 +9,7 @@
     padding-left: 15px;
     min-width: 100px;
     max-width: 260px;
-    background-image: @tab-background-inactive;
-    background-size: cover;
+    background-color: @tab-background-color;
     color: @text-color-subtle;
 
     .title {
@@ -22,8 +21,7 @@
     }
 
     &.active {
-      background-image: @text-color;
-      background-size: cover;
+      background-color: @tab-background-color-active;
     }
 
     &.active .title {
@@ -31,13 +29,11 @@
     }
 
     &.active:hover {
-      background-image: @tab-background-active;
-      background-size: cover;
+      background-color: @tab-background-color-active;
     }
 
     &:hover {
-      background-image: @tab-background-hover;
-      background-size: cover;
+      background-color: @tab-background-color-hover;
     }
 
     &:hover .title {
