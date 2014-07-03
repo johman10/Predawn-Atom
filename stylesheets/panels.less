@@ -1,0 +1,33 @@
+@import "ui-variables";
+
+.panel {
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+}
+
+.tool-panel {
+  //.text(normal);
+  color: @text-color;
+  position: relative;
+
+  background-color: @tool-panel-background-color;
+
+  &.panel-bottom {
+    border-top: 1px solid @tool-panel-border-color;
+  }
+
+  &.panel-left {
+    border-right: 1px solid @tool-panel-border-color;
+  }
+
+  &.panel-right {
+    border-left: 1px solid @tool-panel-border-color;
+  }
+}
+
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+}
