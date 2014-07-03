@@ -11,6 +11,7 @@
     max-width: 260px;
     background-color: @tab-background-color;
     color: @text-color-subtle;
+    border-right: 1px solid @tab-background-color-active;
 
     .title {
       opacity: @text-color-subtle;
@@ -18,6 +19,10 @@
 
     &:first-child {
       padding-left: 15px;
+    }
+
+    &:last-child {
+      border-right: none;
     }
 
     &.active {
