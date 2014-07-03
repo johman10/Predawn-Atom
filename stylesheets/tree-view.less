@@ -56,7 +56,7 @@
     &.expanded .icon-repo,
     &.expanded .icon-file-directory {
       &:before {
-        background-image: url("atom://predawn-atom/images/group-open.png");
+        background-image: @group-open-icon;
         content: " ";
         width: 24px;
         height: 16px;
@@ -65,14 +65,14 @@
       }
 
       &:active:before {
-        background-image: url("atom://predawn-atom/images/group-open-selected.png");
+        background-image: @group-open-icon-selected;
       }
     }
 
     &.collapsed .icon-repo,
     &.collapsed .icon-file-directory {
       &:before {
-        background-image: url("atom://predawn-atom/images/group-closed.png");
+        background-image: @group-closed-icon;
         content: " ";
         width: 24px;
         height: 16px;
@@ -81,7 +81,7 @@
       }
 
       &:active:before {
-        background-image: url("atom://predawn-atom/images/group-closed-selected.png");
+        background-image: @group-closed-icon-selected;
       }
     }
   }
