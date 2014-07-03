@@ -53,12 +53,14 @@
       margin-top: 9px;
     }
 
-    .close-icon:hover:before {
+    .close-icon:hover:before,
+    &.modified:hover .close-icon:hover:before {
       background-image: @tab-close-icon-hover;
       opacity: 1;
     }
 
-    &.modified:not(:hover) .close-icon {
+    &.modified:not(:hover) .close-icon,
+    &.modified:hover .close-icon {
       top: 1px;
       right: 10px;
       width: 12px;
@@ -67,7 +69,8 @@
       border-radius: 0;
     }
 
-    &.modified:not(:hover) .close-icon:before {
+    &.modified:not(:hover) .close-icon:before,
+    &.modified:hover .close-icon:before {
       background-image: @tab-close-icon-dirty;
       opacity: 1;
     }
