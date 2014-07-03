@@ -20,6 +20,16 @@
     color: @tip-text-color;
     white-space: nowrap;
     max-width: none;
+
+    .keystroke {
+      color: @tip-text-color;
+      &:before {
+        content: '(';
+      }
+      &:after {
+        content: ')';
+      }
+    }
   }
 
   &.top .tooltip-arrow {
