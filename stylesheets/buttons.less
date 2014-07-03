@@ -13,4 +13,12 @@
     color: @text-color-highlight;
     background-color: @button-background-color-hover;
   }
+
+  &.selected {
+    color: @text-color-highlight;
+    background-color: lighten(@button-background-color-hover, 5%);
+    &:hover {
+      background-color: lighten(@button-background-color-hover, 8%);
+    }
+  }
 }
