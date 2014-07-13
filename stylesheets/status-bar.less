@@ -1,4 +1,15 @@
 .status-bar {
   background-color: @tab-bar-background-color;
   color: rgb(140, 140, 140);
+  .status-bar .icon.icon-squirrel:before {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+  .text-info {
+    color: darken(@text-color-highlight, 10%);
+  }
+  .release-notes-status {
+    color: @text-color-highlight;
+  }
 }
