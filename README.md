@@ -11,3 +11,26 @@ You can clone this package from here with:
     git clone https://github.com/adammw/predawn-atom.git
 
 After that you can change the UI theme within the settings of Atom.
+
+# Settings
+If you would like settings like in the original theme you can add the following lines to your stylesheet (Atom > Open your stylesheet).
+
+    // Height of tabs
+    @tab-height: 50px;
+
+    // Height of tree items
+    @tree-height: 25px;
+
+    // Assigning variables
+    .list-item {
+      line-height: @tree-height !important;
+    }
+
+    .tab-bar {
+      height: @tab-height;
+      line-height: @tab-height;
+
+      .tab {
+        height: @tab-height;
+      }
+    }
