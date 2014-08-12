@@ -1,34 +1,9 @@
-# Predawn theme for Atom.
-This is a theme for Atom. It's based on [Predawn](https://github.com/jamiewilson/predawn).
+# Atom Dark UI theme
 
-# Installation
-This theme is not (yet) available from the package management system.
-You can clone this package from here with:
+Default dark UI theme for Atom.
 
-    cd ~/.atom/packages
-    git clone git@github.com:johman10/Predawn-Atom.git
+This theme is installed by default with Atom and can be activated by going to
+the _Themes_ section in the Settings view (`cmd-,`) and selecting it from the
+_UI Themes_ drop-down menu.
 
-After that you can change the UI theme within the settings of Atom.
-
-# Settings
-If you would like settings like in the original theme you can add the following lines to your stylesheet (Atom > Open your stylesheet).
-
-    // Height of tabs
-    @tab-height: 50px;
-
-    // Height of tree items
-    @tree-height: 25px;
-
-    // Assigning variables
-    .list-item {
-      line-height: @tree-height !important;
-    }
-
-    .tab-bar {
-      height: @tab-height;
-      line-height: @tab-height;
-
-      .tab {
-        height: @tab-height;
-      }
-    }
+![](https://f.cloud.github.com/assets/671378/2265086/c6897dba-9e7b-11e3-945d-551cac610717.png)
