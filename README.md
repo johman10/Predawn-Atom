@@ -1,3 +1,6 @@
+# Deprecation warning
+This plugin is not being supported by me anymore. Please go to [Atom packages](https://atom.io/packages/predawn-ui) or [this Github](https://github.com/jamiewilson/predawn-ui) for a better version of this.
+
 # Atom Dark UI theme
 
 Default dark UI theme for Atom.
